@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { StyleSheet, Text, View, ScrollView} from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Picker } from 'react-native';
 import { Input } from 'react-native-elements';
 import { Header } from 'react-native-elements';
 import { Button } from 'react-native-elements';
@@ -12,7 +12,7 @@ export default class App extends Component {
   state = {
     checked: true, //Valeur des cases à cocher
   }
-
+  
   seeAlert() {
     Alert.alert(
       "Question",
@@ -25,8 +25,10 @@ export default class App extends Component {
       );
       //Fonction message d'alerte
   }
+  
 
   render() {
+
   return (
       <ScrollView>
         <View style={styles.container}>
@@ -44,6 +46,13 @@ export default class App extends Component {
           <Input placeholder="Carte d'identité..." leftIcon= {<Icon name='address-card'size={17}color='#7B8894'/>}/>
           <Input placeholder='Empreinte banquaire...' leftIcon= {<Icon name='credit-card-alt'size={17}color='#7B8894'/>}/>
           <Input placeholder='Modèle...' leftIcon= {<Icon name='car'size={17}color='#7B8894'/>}/>
+          <Picker
+              style={{ height: 50, width: 150 }}
+              onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
+              <Picker.Item label="Modèle" value="mode" />
+              <Picker.Item label="Peugeot" value="pt" />
+              <Picker.Item label="Renault" value="rt" />
+          </Picker>
           <Input placeholder='Marque...' leftIcon= {<Icon name='star'size={17}color='#7B8894'/>}/>
           <Input placeholder='Immatriculation...' leftIcon= {<Icon name='bars'size={17}color='#7B8894'/>}/>
           <Input placeholder='Etat Véhicule...' leftIcon= {<Icon name='heartbeat'size={17}color='#7B8894'/>}/>
