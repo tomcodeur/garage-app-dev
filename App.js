@@ -51,14 +51,14 @@ export default class App extends Component {
           <Input placeholder="Carte d'identité..." leftIcon= {<Icon name='address-card'size={17}color='#7B8894'/>}/>
           <Input placeholder='Empreinte banquaire...' leftIcon= {<Icon name='credit-card-alt'size={17}color='#7B8894'/>}/>
           <Picker
-              style={{ height: 50, width: 150, marginTop: 10, marginBottom: 10}}
+              style={{ height: 50, width: '100%', marginTop: 10, marginBottom: 10}}
               onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
               <Picker.Item label="Marque" value="mode" />
               <Picker.Item label="Peugeot" value="pt" />
               <Picker.Item label="Renault" value="rt" />
           </Picker>
           <Picker
-              style={{ height: 50, width: 150, marginTop: 10, marginBottom: 10}}
+              style={{ height: 50, width: '100%', marginTop: 10, marginBottom: 10}}
               onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
               <Picker.Item label="Modèle" value="mode" />
               <Picker.Item label="106" value="p106" />
@@ -66,7 +66,7 @@ export default class App extends Component {
           </Picker>
           <Input placeholder='Immatriculation...' leftIcon= {<Icon name='bars'size={17}color='#7B8894'/>}/>
           <Picker
-              style={{ height: 50, width: 150, marginTop: 10, marginBottom: 10 }}
+              style={{ height: 50, width: '100%', marginTop: 10, marginBottom: 10 }}
               onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
               <Picker.Item label="Etat" value="mode" />
               <Picker.Item label="Bon état" value="bon" />
